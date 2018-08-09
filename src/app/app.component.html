@@ -1,5 +1,7 @@
 <div class="example-container">
 
+  <mat-toolbar>Recuerda.ME</mat-toolbar>
+
   <mat-form-field>
     <textarea matInput [(ngModel)]="message" required placeholder="Mensaje que quieres que te enviemos"></textarea>
   </mat-form-field>
@@ -20,7 +22,9 @@
     </mat-select>
   </mat-form-field>
 
-  <button mat-stroked-button (click)="saveReminder($event)" [disabled]="!isdataCorrect()" color="primary">Programar recordatorio!</button>
+  <div class="footer-bttn">
+    <button mat-stroked-button (click)="saveReminder($event)" [disabled]="!isdataCorrect()" color="primary">Programar recordatorio</button>
+  </div>
 
 </div>
 

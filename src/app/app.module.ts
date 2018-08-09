@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ReminderComponent } from './reminder/reminder.component';
 
-import {MatInputModule, MatSelectModule, MatSnackBarModule} from '@angular/material';
+import {MatInputModule, MatSelectModule, MatSnackBarModule, MatToolbarModule, MatButtonModule } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
+    MatToolbarModule,
+    MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule

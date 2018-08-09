@@ -3,3 +3,29 @@
   flex-direction: column;
 }
 
+mat-toolbar {
+  text-align: center;
+}
+
+button {
+  width: 20%;
+  height: 10%;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+mat-toolbar {
+  margin-bottom: 2%;
+}
+
+mat-form-field { 
+  margin-bottom: 3%;
+}
+
+.footer-bttn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}

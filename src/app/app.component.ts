@@ -9,13 +9,6 @@ import {MatSnackBar} from '@angular/material';
 })
 export class AppComponent {
 
-  get email(): FormControl {
-    return this._email;
-  }
-  set email(value: FormControl) {
-    this._email = value;
-  }
-
   private _email = new FormControl('', [Validators.required, Validators.email]);
   message: string;
 
@@ -30,6 +23,10 @@ export class AppComponent {
   saveReminder(event) {
     console.log(event);
     this.snackBar.open('Recordatorio guardado!')._dismissAfter(1000);
+
+    setTimeout( () => {
+      this.resetFields();
+    }, 1000 );
   }
 
   isdataCorrect(): boolean {
@@ -38,5 +35,17 @@ export class AppComponent {
 
   isValidString(srt: string): boolean {
     return (srt !== null && srt !== '' && srt !== undefined);
+  }
+
+  resetFields() {
+    this.message = '';
+    this._email.reset();
+  }
+
+  get email(): FormControl {
+    return this._email;
+  }
+  set email(value: FormControl) {
+    this._email = value;
   }
 }

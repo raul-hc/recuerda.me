@@ -1,6 +1,11 @@
 <div class="example-container">
 
-  <mat-toolbar>Recuerda.ME</mat-toolbar>
+  <mat-toolbar>
+    <mat-toolbar-row class="app-title">
+        <span> Recuerda.ME </span>
+        <mat-icon class="app-icon" svgIcon="event">event</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
   <mat-form-field>
     <textarea matInput [(ngModel)]="message" required placeholder="Mensaje que quieres que te enviemos"></textarea>
@@ -28,5 +33,4 @@
 
 </div>
 
-
-
+<app-footer></app-footer>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-import {MatSnackBar} from '@angular/material';
+import { FormControl, Validators } from '@angular/forms';
+import { MatSnackBar, MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,11 @@ export class AppComponent {
         'No es un email valido' : '';
   }
 
-  constructor(public snackBar: MatSnackBar) { }
+  constructor(public snackBar: MatSnackBar, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+        'event',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/img/event-icon.svg'));
+  }
 
   saveReminder(event) {
     console.log(event);

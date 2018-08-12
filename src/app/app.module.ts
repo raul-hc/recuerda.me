@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ReminderComponent } from './reminder/reminder.component';
 
-import {MatInputModule, MatSelectModule, MatSnackBarModule, MatToolbarModule, MatButtonModule } from '@angular/material';
+import {MatInputModule, MatSelectModule, MatSnackBarModule, MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReminderComponent
+    ReminderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -19,9 +23,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSnackBarModule,
     MatToolbarModule,
     MatButtonModule,
+    MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

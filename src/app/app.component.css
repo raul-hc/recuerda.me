@@ -7,17 +7,16 @@ mat-toolbar {
   text-align: center;
 }
 
-button {
-  width: 20%;
-  height: 10%;
-}
-
 textarea {
   min-height: 100px;
 }
 
-mat-toolbar {
-  margin-bottom: 2%;
+.app-icon {
+  padding: 0 14px;
+}
+
+mat-toolbar-row.app-title {
+  justify-content: center;
 }
 
 mat-form-field { 
